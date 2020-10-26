@@ -30,7 +30,6 @@ exports.validateLoginData = (data) => {
     if (isEmtpy(data.email)) errors.email = 'Must not be empty';
     if (isEmtpy(data.password)) errors.password = 'Must not be empty';
 
-    if (Object.keys(errors).length > 0) return res.status(400).json(errors);
 
     return {
         errors,
